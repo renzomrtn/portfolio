@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: renzomrtn/portfolio
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Technologies", name: "technologies", widget: "list", default: []}
+      - {label: "Team", name: "team", widget: "string", required: false}
+      - {label: "Client", name: "client", widget: "string", required: false}
+      - {label: "Date", name: "date", widget: "date", dateFormat: "MM-DD-YYYY", timeFormat: false}
+      - {label: "Link", name: "link", widget: "string", required: false}
+      - {label: "Hours", name: "hours", widget: "number", required: false}
+      - {label: "Progress", name: "progress", widget: "number", required: false}
+  
+  - name: "photos"
+    label: "Photos"
+    folder: "content/photos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Caption", name: "caption", widget: "text", required: false}
+      - {label: "Date", name: "date", widget: "date", dateFormat: "MM-DD-YYYY", timeFormat: false}
+      - {label: "Location", name: "location", widget: "string", required: false}
+      - {label: "Camera", name: "camera", widget: "string", required: false}
