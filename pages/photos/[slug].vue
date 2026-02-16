@@ -37,10 +37,10 @@
       </div>
     </div>
   </section>
+  <FooterView />
 </template>
 
 <script setup>
-import FooterView from '~/components/FooterView.vue'
 
 const route = useRoute()
 const slug = route.params.slug
