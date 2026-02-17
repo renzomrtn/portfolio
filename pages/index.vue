@@ -10,7 +10,7 @@
         <button class="close-btn" @click="closeAlert" aria-label="Close alert">×</button>
       </div>
     </div>
-  -->
+    -->
     <HeaderView />
 
     <div class="content">
