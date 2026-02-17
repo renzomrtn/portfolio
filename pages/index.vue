@@ -203,31 +203,19 @@
       </div>
     </div>
     <FooterView />
-    <!-- All Projects Grid 
-    <div class="all-projects-section" id="all-projects">
-      <h2>All Projects</h2>
-      <div class="projects-grid" v-if="projects && projects.length">
-        <NuxtLink v-for="project in projects" :key="project._id" :to="project._path" class="grid-project-card">
-          <img :src="project.image" :alt="project.title" />
-          <div class="grid-overlay">
-            <h3>{{ project.title }}</h3>
-          </div>
-        </NuxtLink>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script setup>
 const { data: photos } = await useAsyncData('photos', () =>
   queryContent('photos')
-    .sort({ date: -1 })
+    .sort({ _file: -1 })
     .find()
 )
 
 const { data: projects } = await useAsyncData('projects', () =>
   queryContent('projects')
-    .sort({ date: -1 })
+    .sort({ _file: -1 })
     .find()
 )
 
