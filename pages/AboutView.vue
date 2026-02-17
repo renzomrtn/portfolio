@@ -4,6 +4,7 @@ import FooterView from '../components/FooterView.vue';
 </script>
 
 <template>
+    <HeaderView />
     <div>
         <!-- Hero Section -->
         <section class="hero-section">

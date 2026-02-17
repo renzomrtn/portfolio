@@ -1,29 +1,7 @@
 <template>
     <div>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img src="/images/webpage/logo.png" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="about">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="contact">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/files/MartinFajardo-Resume.pdf" target="_blank" rel="noopener noreferrer">RESUME</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <HeaderView />
 
         <!-- Hero Section -->
         <section class="hero-section">

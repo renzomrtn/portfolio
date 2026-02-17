@@ -145,11 +145,11 @@
             </div>
 
             <div class="about-block">
-              <h6><a href="about">About</a></h6>
+              <h6><a href="AboutView">About</a></h6>
             </div>
 
             <div class="contact-block">
-              <h6><a href="contact">Contact</a></h6>
+              <h6><a href="ContactView">Contact</a></h6>
             </div>
 
             <div class="resume-block">
