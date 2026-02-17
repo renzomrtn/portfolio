@@ -14,20 +14,6 @@
     <HeaderView />
 
     <div class="content">
-      <!-- HentStories LB
-      <video autoplay muted loop playsinline>
-        <source
-          src="https://shared.fastly.steamstatic.com/community_assets/images/items/2642820/c39248bf55f0422f0420c2dd1f0885faae18f3c7.mp4"
-          type="video/mp4" />
-      </video>
-      -->
-      <!-- SweetShine LB from backgrounds.gallery
-      <video autoplay muted loop playsinline>
-        <source
-          src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1636420/c588325b959d8f9abe102f95dbffee8b2b069761.mp4"
-          type="video/mp4" />
-      </video>
-      -->
       <!-- LB from backgrounds.gallery -->
       <video autoplay muted loop playsinline>
         <source
