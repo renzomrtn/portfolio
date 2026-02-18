@@ -11,25 +11,24 @@
             </video>
             <div class="wrapper">
                 <section class="contact-section">
+                    <h2 class="text-center mb-5">LET'S CONNECT</h2>
+
                     <div class="contact-container">
-                        <h2 class="text-center mb-5">LET'S CONNECT</h2>
                         <div class="social-wrapper">
                             <a href="https://www.linkedin.com/in/lorenzz/" target="_blank" class="social-link">
                                 <i class="fab fa-linkedin fa-2x"></i>
-                                LinkedIn
                             </a>
-                            <a href="https://github.com/lorenzz" target="_blank" class="social-link">
+                            <a href="https://github.com/renzomrtn" target="_blank" class="social-link">
                                 <i class="fab fa-github fa-2x"></i>
-                                Github
                             </a>
-                            <a href="https://www.instagram.com/lorenzz/" target="_blank"
-                                class="social-link">
+                            <a href="https://www.instagram.com/renzomrtn/" target="_blank" class="social-link">
                                 <i class="fab fa-instagram fa-2x"></i>
-                                Instagram
                             </a>
-                            <a href="https://www.facebook.com/lorenzz" target="_blank" class="social-link">
+                            <a href="https://www.twitter.com/renzomrtn" target="_blank" class="social-link">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/renzomrtn" target="_blank" class="social-link">
                                 <i class="fab fa-facebook fa-2x"></i>
-                                Facebook
                             </a>
                         </div>
                         <div class="form-wrapper">
@@ -101,6 +100,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    height: 100vh;
 }
 
 .content video {
@@ -119,8 +119,15 @@ body {
     z-index: 1;
     width: 50%;
     padding: 2rem;
-        background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
 
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
 }
 
 .social-wrapper {
@@ -128,10 +135,20 @@ body {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
-    background-color: rgba(179, 21, 21, 0.5);
 }
 
-.form-wrapper, .social-wrapper {
+.social-link {
+    color: #c7d5e0;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ffffff;
+}
+
+.form-wrapper,
+.social-wrapper {
+    width: 100%;
     margin: 0 auto;
 }
 
