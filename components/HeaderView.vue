@@ -2,8 +2,10 @@
     <nav class="steam-nav">
       <div class="nav-container">
         <div class="nav-brand">
-          <img src="/images/webpage/logo.png" alt="Logo" />
-          <h2>Renzomrtn</h2>
+          <a href="/">
+            <img src="/images/webpage/logo.png" alt="Logo" />
+            <h2>Renzomrtn</h2>
+          </a>
         </div>
         <div class="nav-links">
           <a href="AboutView">About</a>
@@ -47,6 +49,18 @@
 .nav-links {
   display: flex;
   gap: 2rem;
+}
+
+a {
+  color: #c7d5e0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .nav-links a {

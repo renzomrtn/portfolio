@@ -129,19 +129,19 @@
             </div>
 
             <div class="projects-block">
-              <h6>Projects <span class="count">15</span></h6>
+              <h6><a href="ProjectsView">Projects</a> <span class="count">15</span></h6>
             </div>
 
             <div class="photography-block">
-              <h6><a href="photography">Photography</a></h6>
+              <h6><a href="PhotographyView">Photography</a> <span class="count">1</span></h6>
             </div>
 
             <div class="guides-block">
-              <h6><a href="guides">Guides</a></h6>
+              <h6><a href="GuidesView">Guides</a> <span class="count">3</span></h6>
             </div>
 
             <div class="micro-block">
-              <h6><a href="micro-creds">Micro-Credentials</a></h6>
+              <h6><a href="MicroCredsView">Micro-Credentials <span class="count">16</span></a></h6>
             </div>
 
             <div class="about-block">
