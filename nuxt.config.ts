@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   
   css: [
     '~/assets/styles/main.css',
+    '@fortawesome/fontawesome-free/css/all.min.css'
   ],
   
   nitro: {

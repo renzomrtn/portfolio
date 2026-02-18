@@ -13,6 +13,25 @@
                 <section class="contact-section">
                     <div class="contact-container">
                         <h2 class="text-center mb-5">LET'S CONNECT</h2>
+                        <div class="social-wrapper">
+                            <a href="https://www.linkedin.com/in/lorenzz/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/lorenzz" target="_blank" class="social-link">
+                                <i class="fab fa-github fa-2x"></i>
+                                Github
+                            </a>
+                            <a href="https://www.instagram.com/lorenzz/" target="_blank"
+                                class="social-link">
+                                <i class="fab fa-instagram fa-2x"></i>
+                                Instagram
+                            </a>
+                            <a href="https://www.facebook.com/lorenzz" target="_blank" class="social-link">
+                                <i class="fab fa-facebook fa-2x"></i>
+                                Facebook
+                            </a>
+                        </div>
                         <div class="form-wrapper">
                             <form action="https://formspree.io/f/xblqlgaa" method="POST">
                                 <input type="hidden" name="_subject" value="Contact from website" />
@@ -104,8 +123,15 @@ body {
 
 }
 
-.form-wrapper {
-    max-width: 1000px;
+.social-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgba(179, 21, 21, 0.5);
+}
+
+.form-wrapper, .social-wrapper {
     margin: 0 auto;
 }
 
