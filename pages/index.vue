@@ -221,50 +221,11 @@ const closeAlert = () => {
 </script>
 
 <style scoped>
-@import url('https://fonts.cdnfonts.com/css/motiva-sans');
-
-body {
-  font-family: 'motiva-sans', sans-serif;
-}
-
-.steam-portfolio {
-  background-color: #000000;
-  min-height: 100vh;
-  color: #c7d5e0;
-  font-family: "Motiva Sans", Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Main Content */
-.content {
-  /* background: url("/images/webpage/hs.jpg") no-repeat center center; backup bg*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.content video {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
-.content .profile-wrapper {
+.profile-wrapper {
   position: relative;
   z-index: 1;
   color: white;
-}
-
-/* Profile Wrapper */
-.profile-wrapper {
+  height: 100%;
   background: radial-gradient(circle at 20% 30%, rgba(99, 4, 136, 0.9), transparent 70%),
     radial-gradient(circle at 80% 20%, rgba(50, 0, 40, 0.9), transparent 70%),
     radial-gradient(circle at 50% 80%, rgba(150, 40, 130, 0.9), transparent 70%),

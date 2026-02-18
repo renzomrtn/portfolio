@@ -76,53 +76,6 @@
     </div>
 </template>
 <style scoped>
-@import url('https://fonts.cdnfonts.com/css/motiva-sans');
-
-body {
-    font-family: 'motiva-sans', sans-serif;
-}
-
-.steam-portfolio {
-    background-color: #000000;
-    min-height: 100vh;
-    color: #c7d5e0;
-    font-family: "Motiva Sans", Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Main Content */
-.content {
-    /* background: url("/images/webpage/hs.jpg") no-repeat center center; backup bg*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-}
-
-.content video {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transform: translateX(-50%);
-    z-index: 0;
-}
-
-.wrapper {
-    position: relative;
-    z-index: 1;
-    width: 50%;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-}
-
 .contact-container {
     display: flex;
     flex-direction: column;
