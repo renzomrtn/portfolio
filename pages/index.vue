@@ -40,7 +40,7 @@
               </div>
               <div class="desc">
                 <p>Photographer | Developer | Tech Enthusiast</p>
-                <p>I play games too from time to time.</p>
+                <p>If you think you have nothing to do. You actually have a lot to do. Just think again. You're wecome.</p>
               </div>
             </div>
           </div>
@@ -284,17 +284,19 @@ const closeAlert = () => {
 }
 
 .profile-header {
+  width: 100%;
   height: 160px;
   display: flex;
   justify-content: left;
   align-items: flex-start;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 
 .profile-name-loc-desc {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 65%;
 }
 
 .profile-name h1 {
