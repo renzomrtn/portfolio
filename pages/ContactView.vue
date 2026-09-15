@@ -1,132 +1,190 @@
 <template>
     <div class="steam-portfolio">
-        <!-- Navigation -->
         <HeaderView />
-        <div class="content">
-            <!-- LB from backgrounds.gallery -->
-            <video autoplay muted loop playsinline>
-                <source
-                    src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1876560/52fda1e426d9e5407530e51b1d8959f1b17b564d.mp4"
-                    type="video/mp4" />
-            </video>
-            <div class="wrapper">
-                <section class="contact-section">
-                    <h2 class="text-center mb-5">LET'S CONNECT</h2>
-
-                    <div class="contact-container">
-                        <div class="social-wrapper">
-                            <a href="https://www.linkedin.com/in/lorenzz/" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin fa-2x"></i>
-                            </a>
-                            <a href="https://github.com/renzomrtn" target="_blank" class="social-link">
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                            <a href="https://www.instagram.com/renzomrtn/" target="_blank" class="social-link">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-                            <a href="https://www.twitter.com/renzomrtn" target="_blank" class="social-link">
-                                <i class="fab fa-twitter fa-2x"></i>
-                            </a>
-                            <a href="https://www.facebook.com/renzomrtn" target="_blank" class="social-link">
-                                <i class="fab fa-facebook fa-2x"></i>
-                            </a>
-                        </div>
-                        <div class="form-wrapper">
-                            <form action="https://formspree.io/f/xblqlgaa" method="POST">
-                                <input type="hidden" name="_subject" value="Contact from website" />
-
-                                <div class="mb-4">
-                                    <label for="name" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control custom-input" id="name" name="name"
-                                        placeholder="Your name" required />
-                                    <div class="invalid-feedback">Please enter your name.</div>
-                                </div>
-
-                                <div class="mb-4">
-                                    <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control custom-input" id="email" name="email"
-                                        placeholder="your@email.com" required />
-                                    <div class="invalid-feedback">Please enter a valid email address.</div>
-                                </div>
-
-                                <div class="mb-4">
-                                    <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control custom-input" id="subject" name="subject"
-                                        placeholder="Subject" required />
-                                    <div class="invalid-feedback">Please enter a subject.</div>
-                                </div>
-
-                                <div class="mb-4">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control custom-input" id="message" name="message" rows="5"
-                                        placeholder="Your message..." required></textarea>
-                                    <div class="invalid-feedback">Please enter your message.</div>
-                                </div>
-
-                                <div class="text-center">
-                                    <button type="submit" class="btn custom-button px-5 py-2">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
+        <main class="page">
+            <section class="shell">
+                <header class="heading">
+                    <p class="eyebrow">Get in touch</p>
+                    <h1>Let's make something useful.</h1>
+                    <p>Have a project, collaboration, or question in mind? Send a message and I'll get back to you.</p>
+                </header>
+                <div class="contact-grid">
+                    <aside class="contact-card">
+                        <p class="eyebrow">Elsewhere</p><a v-for="link in socialLinks" :key="link.name"
+                            :href="link.href" target="_blank" rel="noopener"><i :class="link.icon"
+                                aria-hidden="true" /><span>{{ link.name }}</span><i
+                                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" /></a>
+                    </aside>
+                    <form class="form-card" action="https://formspree.io/f/xblqlgaa" method="POST"><input type="hidden"
+                            name="_subject" value="Contact from portfolio" /><label for="name">Full name<input id="name"
+                                name="name" autocomplete="name" placeholder="Your name" required /></label><label
+                            for="email">Email address<input id="email" type="email" name="email" autocomplete="email"
+                                placeholder="you@example.com" required /></label><label for="subject">Subject<input
+                                id="subject" name="subject" placeholder="What's this about?" required /></label><label
+                            for="message">Message<textarea id="message" name="message" rows="6"
+                                placeholder="Tell me a little about it…" required /></label><button type="submit">Send
+                            message <i class="fa-solid fa-arrow-right" aria-hidden="true" /></button></form>
+                </div>
+            </section>
+        </main>
         <FooterView />
     </div>
 </template>
+<script setup>
+const socialLinks = [{ name: 'LinkedIn', href: 'https://www.linkedin.com/in/martinlorenz-fajardo/', icon: 'fa-brands fa-linkedin-in' }, { name: 'GitHub', href: 'https://github.com/renzomrtn', icon: 'fa-brands fa-github' }, { name: 'Instagram', href: 'https://www.instagram.com/renzomrtn', icon: 'fa-brands fa-instagram' }, { name: 'X / Twitter', href: 'https://www.twitter.com/renzomrtn', icon: 'fa-brands fa-x-twitter' }, { name: 'Facebook', href: 'https://www.facebook.com/renzomrtn', icon: 'fa-brands fa-facebook-f' }]
+</script>
 <style scoped>
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 2rem;
+.page {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  padding: clamp(2rem, 6vw, 5rem) 1rem;
+  background: #0a1018 url('/images/webpage/bg.jpg') center / cover fixed;
 }
 
-.social-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(7, 15, 24, .96), rgba(10, 18, 29, .83));
 }
 
-.social-link {
-    color: #c7d5e0;
-    transition: color 0.3s ease;
+.shell {
+  position: relative;
+  width: min(1160px, 100%);
+  margin: auto;
 }
 
-.social-link:hover {
-    color: #ffffff;
+.heading {
+    max-width: 650px;
+    margin-bottom: 2.5rem;
 }
 
-.form-wrapper,
-.social-wrapper {
-    width: 100%;
-    margin: 0 auto;
+.eyebrow {
+    margin: 0 0 .45rem;
+    color: var(--accent);
+    font: .69rem 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: .1em;
 }
 
-.custom-input {
+.heading h1 {
+    margin: 0 0 .7rem;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    letter-spacing: -.06em;
+}
+
+.heading>p:last-child {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 1rem;
+}
+
+.contact-card,
+.form-card {
+    padding: 1.1rem;
+    background: var(--panel);
+    border: 1px solid var(--line);
     border-radius: 8px;
-    padding: 0.6rem 1rem;
-    height: auto;
 }
 
-.custom-input:focus {
-    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+.contact-card a {
+    display: grid;
+    grid-template-columns: 18px 1fr 14px;
+    gap: .65rem;
+    align-items: center;
+    padding: .8rem .25rem;
+    border-bottom: 1px solid var(--line);
+    color: #dce9f2;
+    font-size: .81rem;
 }
 
-.custom-button {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    border: 2px solid rgb(255, 255, 255);
+.contact-card a:last-child {
+    border-bottom: 0;
+}
+
+.contact-card a:hover {
+    color: var(--accent);
+}
+
+.contact-card a>i:last-child {
+    font-size: .64rem;
+}
+
+.form-card {
+    display: grid;
+    gap: .9rem;
+}
+
+.form-card label {
+    display: grid;
+    gap: .4rem;
+    color: #dbe8ef;
+    font-size: .74rem;
+    font-weight: 700;
+}
+
+.form-card input,
+.form-card textarea {
+    width: 100%;
+    padding: .7rem .8rem;
+    color: var(--ink);
+    background: rgba(5, 12, 18, .55);
+    border: 1px solid var(--line);
     border-radius: 4px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    font: .82rem Manrope, sans-serif;
+    outline: none;
 }
 
-.custom-button:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border-color: black;
+.form-card textarea {
+    resize: vertical;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(111, 199, 219, .11);
+}
+
+.form-card button {
+    justify-self: start;
+    padding: .75rem 1rem;
+    border: 1px solid #61b9cb;
+    border-radius: 4px;
+    color: #edfbff;
+    background: #194554;
+    font-size: .78rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-card button:hover {
+    background: #246276;
+}
+
+@media (max-width: 650px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+
+    .contact-card .eyebrow {
+        grid-column: 1 / -1;
+    }
+
+    .contact-card a {
+        border-bottom: 0;
+    }
 }
 </style>
